@@ -1,4 +1,9 @@
-import { getAllUserDB,getUserByIdDB,updateUserDB } from "../repository/user.response";
+import {
+  getAllUserDB,
+  getUserByIdDB,
+  updateUserDB,
+  deleteUserDB,
+} from "../repository/user.response";
 import { iUser } from "../interfaces/interfaces";
 
 async function getAllUser(): Promise<iUser[]> {
@@ -13,10 +18,22 @@ async function getUserById(id: number): Promise<iUser[]> {
   return data;
 }
 
-async function updateUser(id:number,name:string,surname:string,email:string,pwd:string): Promise<iUser[]> {
-    const data = await updateUserDB(id,name,surname,email,pwd);
-    if (!data.length) throw new Error("no data");
-    return data;
+async function updateUser(
+  id: number,
+  name: string,
+  surname: string,
+  email: string,
+  pwd: string
+): Promise<iUser[]> {
+  const data = await updateUserDB(id, name, surname, email, pwd);
+  if (!data.length) throw new Error("no data");
+  return data;
 }
 
-export { getAllUser, getUserById,updateUser };
+async function deleteUser(id: number): Promise<iUser[]> {
+  const data = await deleteUserDB(id);
+  if (!data.length) throw new Error("no data");
+  return data;
+}
+
+export { getAllUser, getUserById, updateUser, deleteUser };

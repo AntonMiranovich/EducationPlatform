@@ -27,7 +27,8 @@ async function updateUserDB(
     await client.query("BEGIN");
     const sql =
       "update users set name=$1, surname=$2, email=$3, pwd=$4 where id=$5 returning*";
-    const data = (await client.query(sql, [name, surname, email, pwd, id])).rows;
+    const data = (await client.query(sql, [name, surname, email, pwd, id]))
+      .rows;
     await client.query("COMMIT");
     return data;
   } catch (error: any) {
@@ -37,4 +38,19 @@ async function updateUserDB(
   }
 }
 
-export { getAllUserDB, getUserByIdDB, updateUserDB };
+async function deleteUserDB(id: number): Promise<iUser[]> {
+  const client = await pool.connect();
+  try {
+    await client.query("BEGIN");
+    const sql = `delete from users where id=$1 returning *`;
+    const data = (await client.query(sql, [id])).rows;
+    await client.query("COMMIT");
+    return data;
+  } catch (error: any) {
+    await client.query("ROLLBACK");
+    console.log(`deleteDataTaskDB:${error.message}`);
+    return [];
+  }
+}
+
+export { getAllUserDB, getUserByIdDB, updateUserDB, deleteUserDB };
