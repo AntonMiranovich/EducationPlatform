@@ -1,10 +1,11 @@
-import express, { Request, Response } from "express";
-import { getAllUser, getUserById, updateUser,deleteUser } from "../service/user.service";
-import buildResponse from '../helper/buildResponse'
+import express, { Request, Response } from 'express';
+import { getAllUser, getUserById, updateUser, deleteUser } from '../service/user.service';
+import buildResponse from '../helper/buildResponse';
+import { isValidUserBody, isValidId } from '../helper/validation';
 
 const route = express.Router();
 
-route.get("/", async (req: Request, res: Response): Promise<void> => {
+route.get('/', async (req: Request, res: Response): Promise<void> => {
   try {
     const data = await getAllUser();
     buildResponse(res, 200, data);
@@ -13,7 +14,7 @@ route.get("/", async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-route.get("/:id", async (req: Request, res: Response): Promise<void> => {
+route.get('/:id', isValidId, async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
     const data = await getUserById(id);
@@ -23,7 +24,7 @@ route.get("/:id", async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-route.put("/:id", async (req: Request, res: Response) => {
+route.put('/:id', isValidId, isValidUserBody, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { name, surname, email, pwd } = req.body;
@@ -34,14 +35,14 @@ route.put("/:id", async (req: Request, res: Response) => {
   }
 });
 
-route.delete('/:id',async (req: Request, res: Response)=>{
+route.delete('/:id', isValidId, async (req: Request, res: Response) => {
   try {
-    const {id}=req.params
-    const data=await deleteUser(id)
+    const { id } = req.params;
+    const data = await deleteUser(id);
     buildResponse(res, 200, data);
-  } catch (error: any) {
+  } catch (error:any) {
     buildResponse(res, 404, error.message);
   }
-})
+});
 
 export default route;
