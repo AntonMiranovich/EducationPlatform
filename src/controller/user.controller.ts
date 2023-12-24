@@ -40,7 +40,7 @@ route.delete('/:id', isValidId, async (req: Request, res: Response) => {
     const { id } = req.params;
     const data = await deleteUser(id);
     buildResponse(res, 200, data);
-  } catch (error:any) {
+  } catch (error: any) {
     buildResponse(res, 404, error.message);
   }
 });

@@ -1,4 +1,4 @@
-import { getAllUserDB, getUserByIdDB, updateUserDB, deleteUserDB } from '../repository/user.response';
+import { getAllUserDB, getUserByIdDB, updateUserDB, deleteUserDB } from '../repository/user.repository';
 import { iUser } from '../interfaces/interfaces';
 import ExceptionType from '../helper/exception';
 
