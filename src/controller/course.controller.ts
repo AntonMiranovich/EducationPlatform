@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import buildResponse from '../helper/buildResponse';
 import { getAllCourse, getCourseById, postCourse, updateCourse, deleteCourseById } from '../service/course.service';
+import { isValidId, isValidCoursesBody } from '../helper/validation';
 
 const route = express.Router();
 
@@ -13,7 +14,7 @@ route.get('/', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-route.get('/:id', async (req: Request, res: Response): Promise<void> => {
+route.get('/:id', isValidId, async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
     const data = await getCourseById(id);
@@ -23,7 +24,7 @@ route.get('/:id', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-route.post('/', async (req: Request, res: Response): Promise<void> => {
+route.post('/', isValidCoursesBody, async (req: Request, res: Response): Promise<void> => {
   try {
     const { course } = req.body;
     const data = await postCourse(course);
@@ -33,7 +34,7 @@ route.post('/', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-route.put('/:id', async (req: Request, res: Response): Promise<void> => {
+route.put('/:id', isValidId, isValidCoursesBody, async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
     const { course } = req.body;
@@ -44,7 +45,7 @@ route.put('/:id', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-route.delete('/:id', async (req: Request, res: Response): Promise<void> => {
+route.delete('/:id', isValidId, async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
     const data = await deleteCourseById(id);

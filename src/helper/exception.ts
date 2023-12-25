@@ -13,9 +13,18 @@ interface iExceptionType {
   USERS_PASSWORD_LENGTH_VALID: string;
   USERS_PASSWORD_VALID: string;
 
-  API_TITLE_EMPTY:string,
-  API_EMAIL_NOT_CREATE:string,
-  API_NOT_CHACK_PASSWORD:string
+  API_TITLE_EMPTY: string;
+  API_EMAIL_NOT_CREATE: string;
+  API_NOT_CHACK_PASSWORD: string;
+
+  DB_GET_COURSES_NOT_FOUND: string;
+  DB_GET_COURSES_BY_ID_NOT_FOUND: string;
+  DB_POST_COURSES_NOT_UPDATE: string;
+  DB_PUT_COURSES_NOT_UPDATE: string;
+  DB_DELETE_COURSE_NOT_DELETE: string;
+
+  COURSES_TITLE_EMPTY: string;
+  COURSES_NAME_INVALID: string;
 }
 
 const ExceptionType: iExceptionType = {
@@ -33,9 +42,18 @@ const ExceptionType: iExceptionType = {
   USERS_PASSWORD_LENGTH_VALID: 'the length must be more than 8 characters',
   USERS_PASSWORD_VALID: 'email entered incorrectly',
 
-  API_TITLE_EMPTY:'no data',
-  API_EMAIL_NOT_CREATE:'email does not create',
-  API_NOT_CHACK_PASSWORD:'password does not match'
+  API_TITLE_EMPTY: 'no data',
+  API_EMAIL_NOT_CREATE: 'email does not create',
+  API_NOT_CHACK_PASSWORD: 'password does not match',
+
+  DB_GET_COURSES_NOT_FOUND: 'table courses is empty',
+  DB_GET_COURSES_BY_ID_NOT_FOUND: 'courses by id is not found',
+  DB_POST_COURSES_NOT_UPDATE: 'courses does not post',
+  DB_PUT_COURSES_NOT_UPDATE: 'courses does not update',
+  DB_DELETE_COURSE_NOT_DELETE: 'course does not delete',
+
+  COURSES_TITLE_EMPTY: 'no data',
+  COURSES_NAME_INVALID: 'incorrect name couse',
 };
 
 export default ExceptionType;

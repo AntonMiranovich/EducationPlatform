@@ -22,4 +22,11 @@ function isValidId(req, res, next) {
   next();
 }
 
-export { isValidUserBody, isValidId };
+function isValidCoursesBody(req, res, next) {
+  const { course } = req.body;
+  if (!course) throw new Error(ExceptionType.COURSES_TITLE_EMPTY);
+  if (!isNaN(course)) throw new Error(ExceptionType.COURSES_NAME_INVALID);
+  next();
+}
+
+export { isValidUserBody, isValidId, isValidCoursesBody };
