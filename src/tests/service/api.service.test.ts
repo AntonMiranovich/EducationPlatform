@@ -4,7 +4,7 @@ import { registrationUser, authUser } from '../../service/api.service';
 import bcrypt from 'bcrypt';
 
 describe('test registrationUser service', () => {
-  test('return title empty', async () => {
+  test('return success', async () => {
     const repFunction = jest.spyOn(repository, 'getUserByEmail');
     repFunction.mockResolvedValue([]);
 
@@ -57,13 +57,23 @@ describe('test registrationUser service', () => {
       expect(error.message).toBe(ExceptionType.API_TITLE_EMPTY);
     }
   });
+
+  test('return error registration', async () => {
+    const repFunction2 = jest.spyOn(repository, 'getUserByEmail');
+    repFunction2.mockResolvedValue([]);
+    const repFunction = jest.spyOn(repository, 'registrationUserDB');
+    repFunction.mockResolvedValue([]);
+    try {
+      await registrationUser('Anton', 'Miranovich', 'asdqweqwedsa', '24369');
+    } catch (error: any) {
+      expect(error.message).toBe(ExceptionType.API_EMAIL_NOT_CREATE);
+    }
+  });
 });
 
 describe('test authUser', () => {
   test('return success', async () => {
     const repFunction = jest.spyOn(repository, 'getUserByEmail');
-    const bcryptHash = jest.spyOn(bcrypt, 'compare');
-    bcryptHash.mockResolvedValue(true);
     repFunction.mockResolvedValue([
       {
         id: 1,
@@ -73,6 +83,8 @@ describe('test authUser', () => {
         pwd: '24369',
       },
     ]);
+    const bcryptHash = jest.spyOn(bcrypt, 'compare');
+    bcryptHash.mockResolvedValue(true);
 
     const result = await authUser('asdqweqwedsa', '24369');
 
