@@ -8,6 +8,9 @@ describe('test registrationUser service', () => {
     const repFunction = jest.spyOn(repository, 'getUserByEmail');
     repFunction.mockResolvedValue([]);
 
+    const mockHash = jest.spyOn(bcrypt, 'hash');
+    mockHash.mockResolvedValue('vvnnmm8');
+
     const repFunctionCreate = jest.spyOn(repository, 'registrationUserDB');
     repFunctionCreate.mockResolvedValue([
       {
@@ -21,6 +24,7 @@ describe('test registrationUser service', () => {
 
     const result = await registrationUser('Anton', 'Miranovich', 'asdqweqwedsa', '24369');
 
+    expect(mockHash).toHaveBeenCalled();
     expect(repFunctionCreate).toHaveBeenCalled();
     expect(repFunction).toHaveBeenCalled();
     expect(result[0].id).toBe(1);
