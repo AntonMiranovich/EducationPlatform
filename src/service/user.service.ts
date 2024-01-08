@@ -1,4 +1,4 @@
-import { getAllUserDB, getUserByIdDB, updateUserDB, deleteUserDB } from '../repository/user.repository';
+import { getAllUserDB, getUserByIdDB,createUserDB, updateUserDB, deleteUserDB } from '../repository/user.repository';
 import { iUser } from '../interfaces/interfaces';
 import ExceptionType from '../helper/exception';
 
@@ -14,6 +14,12 @@ async function getUserById(id: number): Promise<iUser[]> {
   return data;
 }
 
+async function createUser(name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
+  const data = await createUserDB(name, surname, email, pwd);
+  if (!data.length) throw new Error(ExceptionType.DB_PUT_USERS_NOT_UPDATE);
+  return data;
+}
+
 async function updateUser(id: number, name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
   const data = await updateUserDB(id, name, surname, email, pwd);
   if (!data.length) throw new Error(ExceptionType.DB_PUT_USERS_NOT_UPDATE);
@@ -26,4 +32,4 @@ async function deleteUser(id: number): Promise<iUser[]> {
   return data;
 }
 
-export { getAllUser, getUserById, updateUser, deleteUser };
+export { getAllUser, getUserById, createUser, updateUser, deleteUser };
