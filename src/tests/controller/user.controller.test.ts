@@ -3,7 +3,7 @@ import app from '../../app';
 let id;
 
 test('post', async () => {
-  const res = await request(app).post('/user').send({ name: 'anton', surname: 'mor', email: 'antonmir992@gmail.com', pwd: 'wqeddasd' });
+  const res = await request(app).post('/user').send({ name: 'anton', surname: 'mir', email: 'antonmir992@gmail.com', pwd: 'wqeddasd' });
 
   id = res.body[0].id;
   expect(res.statusCode).toBe(200);
