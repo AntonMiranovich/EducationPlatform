@@ -1,0 +1,37 @@
+.wrapper {
+  width: 1220px;
+  margin: 4% auto 0;
+}
+
+.wrapper .previewContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .previewContent .previewInfo .textPlatforn {
+  color: var(--Primaty-Cyan-Dark, #2b788b);
+  font: 700 16px Montserrat;
+  margin-bottom: 24px;
+}
+
+.wrapper .previewContent .previewInfo h1 {
+  width: 550px;
+  font: 400 56px Dela Gothic One;
+  color: var(--Primaty-Black, #000);
+  margin-bottom: 30px;
+}
+
+.wrapper .previewContent .previewInfo .textAdditional {
+  width: 400px;
+  color: var(--Primaty-Grey-Dark, #757575);
+  font: 600 18px Montserrat;
+  margin-bottom: 30px;
+}
+
+.wrapper .previewImg {
+  background-image: url(./assets/Frame\ 25.png);
+  width: 685px;
+  height: 544px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
