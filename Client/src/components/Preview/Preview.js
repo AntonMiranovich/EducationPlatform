@@ -22,8 +22,27 @@ function Preview() {
         <div className={style.previewImg}></div>
       </div>
 
-      <div className={style.learnContent}></div>
-      <div className={style.knowledgeContent}></div>
+      <div className={style.learnContent}>
+        <div className={style.learnImg}></div>
+        <div className={style.learmInfo}>
+          <h2>Learn a language in a playful way</h2>
+          <p>Make learning programming languages more fun with mini-games</p>
+          <div className={style.learmImgSet}>
+            <div className={style.learnInfoImgPing}></div>
+            <div className={style.learnInfoImgBlue}></div>
+          </div>
+        </div>
+      </div>
+
+      <div className={style.knowledgeContent}>
+        <div className={style.knowInfo}>
+          <h2>Increase your knowledge</h2>
+          <p>Traditional and new effective approaches to learning languages</p>
+          <div className={style.knowInfoBtn}>Textbook →</div>
+        </div>
+        <div className={style.knowImg}></div>
+      </div>
+
       <div className={style.progressContent}></div>
     </div>
   );

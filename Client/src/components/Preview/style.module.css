@@ -1,11 +1,17 @@
 .wrapper {
-  width: 1220px;
+  width: 1900px;
   margin: 4% auto 0;
 }
 
 .wrapper .previewContent {
   display: flex;
   justify-content: space-between;
+  height: 680px;
+  background: var(--Primaty-Grey-Light, #f6f5f4);
+}
+
+.wrapper .previewContent .previewInfo {
+  margin-left: 343px;
 }
 
 .wrapper .previewContent .previewInfo .textPlatforn {
@@ -28,10 +34,148 @@
   margin-bottom: 30px;
 }
 
-.wrapper .previewImg {
-  background-image: url(./assets/Frame\ 25.png);
-  width: 685px;
-  height: 544px;
+.wrapper .previewContent .previewInfo .btn {
+  color: #2b788b;
+  font: 700 16px Montserrat;
+  border-radius: 100px;
+  background: var(--Primaty-Cyan-Light, #c3dce3);
+  padding: 14px 22px;
+  justify-content: center;
+  align-items: center;
+  width: 175px;
+  margin-bottom: 45px;
+}
+
+.wrapper .previewContent .previewInfo .statistics {
+  display: flex;
+}
+
+.wrapper .previewContent .previewInfo .statistics .lightningImg {
+  background-image: url(./assets/Frame\ 35271.png);
   background-repeat: no-repeat;
   background-size: contain;
+  width: 24px;
+  height: 30px;
+  margin: auto 10px auto 0;
+}
+
+.wrapper .previewContent .previewInfo .statistics .studentsCount {
+  color: #000;
+  font: 400 40px Dela Gothic One;
+}
+
+.wrapper .previewContent .previewInfo .statistics .studentsCount span {
+  color: #2b788b;
+}
+
+.wrapper .previewContent .previewInfo .textStudent {
+  color: #585858;
+  font: 600 16px Montserrat;
+  margin-left: 50px;
+}
+
+.wrapper .previewImg {
+  background-image: url(./assets/Frame\ 25.png);
+  width: 900px;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper .learnContent {
+  display: flex;
+  height: 650px;
+  background: #fff;
+}
+
+.wrapper .learnContent .learnImg {
+  background-image: url(./assets/image\ 8.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 580px;
+  height: 445px;
+  margin: 75px 110px 0 343px;
+}
+
+.wrapper .learnContent .learmInfo {
+  width: 520px;
+  margin-top: 130px;
+}
+
+.wrapper .learnContent .learmInfo h2 {
+  color: var(--Primaty-Black, #000);
+  font: 400 48px Dela Gothic One;
+  margin-bottom: 30px;
+}
+
+.wrapper .learnContent .learmInfo p {
+  color: var(--Primaty-Grey-Dark, #757575);
+  font: 600 18px Montserrat;
+  margin-bottom: 30px;
+}
+
+.wrapper .learnContent .learmInfo .learmImgSet {
+  display: flex;
+}
+
+.wrapper .learnContent .learmInfo .learmImgSet .learnInfoImgPing {
+  background-image: url(./assets/Group\ 11.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 131px;
+  height: 145px;
+  margin-right: 20px;
+}
+
+.wrapper .learnContent .learmInfo .learmImgSet .learnInfoImgBlue {
+  background-image: url(./assets/Group\ 10.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 172px;
+  height: 145px;
+}
+
+.wrapper .knowledgeContent {
+  display: flex;
+  background: var(--Primaty-Grey-Light, #f6f5f4);
+  height: 600px;
+}
+
+.wrapper .knowledgeContent .knowInfo {
+  margin-left: 343px;
+}
+
+.wrapper .knowledgeContent .knowInfo h2 {
+  width: 475px;
+  color: var(--Primaty-Black, #000);
+  font: 400 48px Dela Gothic One;
+  margin: 130px 0 30px 0;
+}
+
+.wrapper .knowledgeContent .knowInfo p {
+  width: 396.886px;
+  color: var(--Primaty-Grey-Dark, #757575);
+  font: 600 18px Montserrat;
+  margin-bottom: 35px;
+}
+
+.wrapper .knowledgeContent .knowInfo .knowInfoBtn {
+  border-radius: 100px;
+  background: var(--Primaty-Cyan-Light, #c3dce3);
+  padding: 14px 22px;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  height: 45px;
+  color: #2b788b;
+  font: 700 16px Montserrat;
+}
+
+.wrapper .knowledgeContent .knowImg {
+  background-image: url(./assets/image\ 2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 680px;
+  height: 550px;
+margin: 50px 0 0 70px;
 }
