@@ -1,17 +1,22 @@
-.wrapper {
-  width: 1900px;
+/* .wrapper {
+  width: 1220px;
   margin: 4% auto 0;
+} */
+.wrapper .previewContent,
+.wrapper .learnContent,
+.wrapper .knowledgeContent,
+.wrapper .progressContent {
+  width: 1220px;
+  margin: auto;
 }
 
 .wrapper .previewContent {
+  /* width: 1220px; */
+  /* margin: auto; */
   display: flex;
   justify-content: space-between;
   height: 680px;
   background: var(--Primaty-Grey-Light, #f6f5f4);
-}
-
-.wrapper .previewContent .previewInfo {
-  margin-left: 343px;
 }
 
 .wrapper .previewContent .previewInfo .textPlatforn {
@@ -76,13 +81,19 @@
 
 .wrapper .previewImg {
   background-image: url(./assets/Frame\ 25.png);
-  width: 900px;
-  height: 650px;
+  width: 720px;
+  height: 520px;
+  margin-top: 110px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.wrapper .learmWrapper {
+  background: #fff;
+}
+
 .wrapper .learnContent {
+  margin: auto;
   display: flex;
   height: 650px;
   background: #fff;
@@ -94,7 +105,7 @@
   background-size: contain;
   width: 580px;
   height: 445px;
-  margin: 75px 110px 0 343px;
+  margin: 75px 110px 0 0;
 }
 
 .wrapper .learnContent .learmInfo {
@@ -136,13 +147,11 @@
 }
 
 .wrapper .knowledgeContent {
+  margin: auto;
+  /* width: 1220px; */
   display: flex;
   background: var(--Primaty-Grey-Light, #f6f5f4);
   height: 600px;
-}
-
-.wrapper .knowledgeContent .knowInfo {
-  margin-left: 343px;
 }
 
 .wrapper .knowledgeContent .knowInfo h2 {
@@ -177,5 +186,54 @@
   background-size: contain;
   width: 680px;
   height: 550px;
-margin: 50px 0 0 70px;
+  margin: 50px 0 0 70px;
+}
+
+.wrapper .wrapperProgress {
+  background: #fff;
+}
+
+.wrapper .wrapperProgress .progressContent {
+  margin: auto;
+  display: flex;
+  height: 600px;
+  background: #fff;
+}
+
+.wrapper .wrapperProgress .progressContent .progressImg {
+  background-image: url(./assets/image\ 1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 680px;
+  height: 410px;
+  margin: 90px 0 0 30px;
+}
+
+.wrapper .wrapperProgress .progressContent .progressInfo {
+  width: 450px;
+}
+
+.wrapper .wrapperProgress .progressContent .progressInfo h2 {
+  color: var(--Primaty-Black, #000);
+  font: 400 48px Dela Gothic One;
+  margin: 150px 0 30px 0;
+}
+
+.wrapper .wrapperProgress .progressContent .progressInfo p {
+  color: var(--Primaty-Grey-Dark, #757575);
+  font: 600 18px Montserrat;
+  margin-bottom: 30px;
+}
+
+.wrapper .wrapperProgress .progressContent .progressInfo .progressInfoBtn {
+  width: 145px;
+  height: 45px;
+  border-radius: 100px;
+  background: var(--Primaty-Cyan-Light, #c3dce3);
+  display: flex;
+  padding: 14px 22px;
+  justify-content: center;
+  align-items: center;
+  color: var(--Primaty-Cyan-Dark, #2b788b);
+  font: 700 16px Montserrat;
 }

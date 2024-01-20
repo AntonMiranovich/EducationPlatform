@@ -22,14 +22,16 @@ function Preview() {
         <div className={style.previewImg}></div>
       </div>
 
-      <div className={style.learnContent}>
-        <div className={style.learnImg}></div>
-        <div className={style.learmInfo}>
-          <h2>Learn a language in a playful way</h2>
-          <p>Make learning programming languages more fun with mini-games</p>
-          <div className={style.learmImgSet}>
-            <div className={style.learnInfoImgPing}></div>
-            <div className={style.learnInfoImgBlue}></div>
+      <div className={style.learmWrapper}>
+        <div className={style.learnContent}>
+          <div className={style.learnImg}></div>
+          <div className={style.learmInfo}>
+            <h2>Learn a language in a playful way</h2>
+            <p>Make learning programming languages more fun with mini-games</p>
+            <div className={style.learmImgSet}>
+              <div className={style.learnInfoImgPing}></div>
+              <div className={style.learnInfoImgBlue}></div>
+            </div>
           </div>
         </div>
       </div>
@@ -43,7 +45,16 @@ function Preview() {
         <div className={style.knowImg}></div>
       </div>
 
-      <div className={style.progressContent}></div>
+      <div className={style.wrapperProgress}>
+        <div className={style.progressContent}>
+          <div className={style.progressImg}></div>
+          <div className={style.progressInfo}>
+            <h2>Watch your progress every day</h2>
+            <p>Save statistics on your achievements and mistakes</p>
+            <div className={style.progressInfoBtn}>Statistics →</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
