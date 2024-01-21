@@ -1,7 +1,3 @@
-/* .wrapper {
-  width: 1220px;
-  margin: 4% auto 0;
-} */
 .wrapper .previewContent,
 .wrapper .learnContent,
 .wrapper .knowledgeContent,
@@ -11,12 +7,11 @@
 }
 
 .wrapper .previewContent {
-  /* width: 1220px; */
-  /* margin: auto; */
   display: flex;
   justify-content: space-between;
   height: 680px;
   background: var(--Primaty-Grey-Light, #f6f5f4);
+  margin-top: 95px;
 }
 
 .wrapper .previewContent .previewInfo .textPlatforn {

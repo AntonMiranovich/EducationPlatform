@@ -1,0 +1,69 @@
+.wrapper {
+  width: 1220px;
+  margin: 40px auto;
+
+}
+
+.wrapper .footerInfo,
+.wrapper .linkFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .footerInfo .navigationFooter,
+.wrapper .footerInfo .nameFooter,
+.wrapper .linkFooter .link {
+  display: flex;
+}
+
+.wrapper .footerInfo .navigationFooter p,
+.wrapper .footerInfo .nameFooter p {
+  color: var(--Primaty-Grey-Dark, #757575);
+  font: 600 14px Montserrat;
+}
+
+.wrapper .footerInfo .navigationFooter p:not(:last-child),
+.wrapper .footerInfo .nameFooter p:not(:last-child) {
+  margin-right: 30px;
+}
+
+.wrapper .bandFooter {
+  background-image: url(./assets/Vector\ 1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 8px;
+  margin: 20px 0;
+}
+
+.wrapper .linkFooter .link .linkCat {
+  background-image: url(./assets/Frame\ 30.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 24px;
+}
+
+.wrapper .linkFooter .link .linkGt {
+  background-image: url(./assets/Frame\ 33.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 24px;
+  margin: 0 20px;
+}
+
+.wrapper .linkFooter .link .linkYou {
+  background-image: url(./assets/Frame\ 31.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 24px;
+}
+
+.wrapper .linkFooter .developer{
+    display: flex;
+    align-items: center;
+    color: var(--Primaty-Grey-Dark, #757575);
+    font: 600 12px Montserrat;
+}
