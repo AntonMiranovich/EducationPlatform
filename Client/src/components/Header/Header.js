@@ -1,13 +1,16 @@
-import style from './style.module.css'
+import style from "./style.module.css";
 
 function Header() {
   return (
-    <div className={style.wrapper}>
-      <h1>Hschool</h1>
-      <div className={style.btns}>
-        <div className={style.login}>Login →</div>
-        <div className={style.reg}>Sign Up</div>
+    <div className={style.glob}>
+      <div className={style.wrapper}>
+        <h1>Hschool</h1>
+        <div className={style.btns}>
+          <div className={style.login}>Login →</div>
+          <div className={style.reg}>Sign Up</div>
+        </div>
       </div>
+      <div className={style.lineHeader}></div>
     </div>
   );
 }

@@ -29,3 +29,11 @@
   background: #2b788b;
   padding: 13px 21px;
 }
+
+.glob .lineHeader{
+    background-image: url(./assets/Vector\ 1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 8px;
+    margin: 20px 0;
+}

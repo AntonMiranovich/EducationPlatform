@@ -1,7 +1,6 @@
 .wrapper {
   width: 1220px;
   margin: 40px auto;
-
 }
 
 .wrapper .footerInfo,
@@ -61,9 +60,9 @@
   height: 24px;
 }
 
-.wrapper .linkFooter .developer{
-    display: flex;
-    align-items: center;
-    color: var(--Primaty-Grey-Dark, #757575);
-    font: 600 12px Montserrat;
+.wrapper .linkFooter .developer {
+  display: flex;
+  align-items: center;
+  color: var(--Primaty-Grey-Dark, #757575);
+  font: 600 12px Montserrat;
 }
