@@ -1,5 +1,5 @@
 import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header/HeadersLog/Header";
 import Registration from "../../components/Registration/Registration";
 
 function RegistrationPage() {
