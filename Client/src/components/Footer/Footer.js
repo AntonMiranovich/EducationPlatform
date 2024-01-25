@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./style.module.css";
 
 function Footer() {
@@ -5,7 +6,9 @@ function Footer() {
     <div className={style.wrapper}>
       <div className={style.footerInfo}>
         <div className={style.navigationFooter}>
-          <p>Home</p>
+          <p>
+            <Link to={"/"}>Home</Link>
+          </p>
           <p>Textbook</p>
           <p>Statistics</p>
           <p>Sprint</p>

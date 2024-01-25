@@ -4,11 +4,11 @@ import Header from "../../components/Header/HeadersLog/Header";
 
 function AuthorizationPage() {
   return (
-    <div>
+    <>
       <Header />
       <Authorization />
       <Footer />
-    </div>
+    </>
   );
 }
 

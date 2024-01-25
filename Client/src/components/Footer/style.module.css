@@ -17,7 +17,13 @@
 }
 
 .wrapper .footerInfo .navigationFooter p,
-.wrapper .footerInfo .nameFooter p {
+.wrapper .footerInfo .nameFooter p{
+  color: var(--Primaty-Grey-Dark, #757575);
+  font: 600 14px Montserrat;
+}
+
+.wrapper .footerInfo .navigationFooter p a,
+.wrapper .footerInfo .nameFooter p a{
   color: var(--Primaty-Grey-Dark, #757575);
   font: 600 14px Montserrat;
 }

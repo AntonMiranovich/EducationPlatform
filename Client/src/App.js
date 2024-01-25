@@ -1,17 +1,15 @@
-import "./App.css";
 import AuthorizationPage from "./pages/AuthorizationPage/AuthorizationPage";
-import CoursesPage from "./pages/CoursesPage/CoursesPage";
 import HomePage from "./pages/HomePage/HomePage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <HomePage />
-      <AuthorizationPage />
-      <RegistrationPage />
-      <CoursesPage />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />}></Route>
+      <Route path="/auth" element={<AuthorizationPage />}></Route>
+      <Route path="/reg" element={<RegistrationPage />}></Route>
+    </Routes>
   );
 }
 

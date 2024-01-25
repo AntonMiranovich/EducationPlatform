@@ -16,13 +16,13 @@
   align-items: center;
 }
 
-.wrapper .btns .login {
+.wrapper .btns .login a{
   color: #000;
   font: 700 16px "Montserrat";
   margin-right: 25px;
 }
 
-.wrapper .btns .reg {
+.wrapper .btns .reg a {
   color: #fff;
   font: 700 16px "Montserrat";
   border-radius: 14.188px;
@@ -37,3 +37,4 @@
     height: 8px;
     margin: 20px 0;
 }
+

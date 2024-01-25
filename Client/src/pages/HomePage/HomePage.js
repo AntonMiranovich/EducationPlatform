@@ -4,11 +4,11 @@ import Preview from "../../components/Preview/Preview";
 
 function HomePage() {
   return (
-    <div>
+    <>
       <Header />
       <Preview />
       <Footer />
-    </div>
+    </>
   );
 }
 

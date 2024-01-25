@@ -4,11 +4,11 @@ import Registration from "../../components/Registration/Registration";
 
 function RegistrationPage() {
   return (
-    <div>
+    <>
       <Header />
       <Registration />
       <Footer />
-    </div>
+    </>
   );
 }
 

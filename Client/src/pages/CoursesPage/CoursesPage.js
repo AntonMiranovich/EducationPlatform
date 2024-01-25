@@ -4,10 +4,10 @@ import HeaderOut from "../../components/Header/HeadersOut/HeadersOut";
 
 function CoursesPage(){
     return (
-        <div>
+        <>
             <HeaderOut/>
             <Footer/>
-        </div>
+        </>
     )
 }
 
