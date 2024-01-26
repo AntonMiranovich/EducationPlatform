@@ -6,7 +6,7 @@
   margin: auto;
 }
 
-.wrapper h1 {
+.wrapper h1 a{
   font: 400 16px "Dela Gothic One";
   color: #000;
 }
