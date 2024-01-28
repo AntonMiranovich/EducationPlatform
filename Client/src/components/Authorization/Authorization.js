@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./style.module.css";
 
 function Authorization() {
@@ -7,7 +8,9 @@ function Authorization() {
         <h1>Login</h1>
         <input placeholder="Placeholder text"></input>
         <input placeholder="Placeholder text"></input>
-        <div className={style.btnLogin}>Login</div>
+        <Link to={"/listcourses"}>
+          <div className={style.btnLogin}>Login</div>
+        </Link>
       </div>
       <div className={style.img}></div>
     </div>
