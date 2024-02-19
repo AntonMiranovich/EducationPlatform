@@ -30,24 +30,23 @@
   outline: none;
 }
 
-.wrapper .singUp input::placeholder{
+.wrapper .singUp input::placeholder {
   font: 400 20px Open Sans;
   color: var(--Gray-Gray-5, #adb5bd);
 }
 
-
-.wrapper .singUp .btnSingUp {
+.wrapper .singUp a {
+  display: block;
+  color: #fff;
+  padding: 15px 0;
+  width: 110px;
   border-radius: 100px;
   background: var(--Primaty-Cyan-Dark, #2b788b);
-  width: 110px;
-  height: 45px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font: 700 16px Montserrat;
   margin-bottom: 80px;
 }
+
 
 .wrapper .img {
   background-image: url(./assets/image\ 33.png);

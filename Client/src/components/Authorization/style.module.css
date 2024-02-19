@@ -34,7 +34,10 @@
   color: var(--Gray-Gray-5, #adb5bd);
 }
 
-.wrapper .login .btnLogin {
+
+
+
+.wrapper .login a {
   border-radius: 100px;
   background: var(--Primaty-Cyan-Dark, #2b788b);
   width: 110px;

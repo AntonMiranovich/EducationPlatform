@@ -1,0 +1,67 @@
+.allInfoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 50px auto;
+    width: 1220px;
+  }
+  
+  .allInfoBlock .blockInfo {
+    display: flex;
+    width: 926px;
+    margin: auto;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0px 22.898px 45.796px -11.449px rgba(52, 41, 39, 0.08);
+  }
+  
+  .allInfoBlock .blockInfo .img1 {
+    background-image: url("./assets/Frame\ 35270.png");
+    width: 337px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 14px 0 0 14px;
+  }
+  
+  .allInfoBlock .blockInfo .img2 {
+    background-image: url("./assets/Frame.png");
+    width: 337px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 14px 0 0 14px;
+  }
+  
+  .allInfoBlock .blockInfo .img3 {
+    background-image: url("./assets/Frame\ 35270.png");
+    width: 337px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 14px 0 0 14px;
+  }
+  
+  .allInfoBlock .blockInfo .information {
+    width: 556px;
+    padding: 40px 0 50px 40px;
+  }
+  
+  .allInfoBlock .blockInfo .information h1 {
+    color: #000;
+    font: 400 32px Dela Gothic One;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .allInfoBlock .blockInfo .information p {
+    color: var(--Primaty-Grey-Dark, #757575);
+    font: 500 16px Montserrat;
+  }
+  
+  .allInfoBlock .blockInfo .information .vector {
+    background-image: url("./assets/Vector\ 1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 8px;
+    margin: 10px 0;
+  }
+  

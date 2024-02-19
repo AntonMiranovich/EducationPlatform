@@ -7,10 +7,10 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />}></Route>
-      <Route path="/auth" element={<AuthorizationPage />}></Route>
-      <Route path="/reg" element={<RegistrationPage />}></Route>
-      <Route path="/listcourses" element={<ListCourses />}></Route>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/auth" element={<AuthorizationPage />} />
+      <Route path="/reg" element={<RegistrationPage />} />
+      <Route path="/listcourses" element={<ListCourses />} />
     </Routes>
   );
 }
