@@ -143,7 +143,6 @@
 
 .wrapper .knowledgeContent {
   margin: auto;
-  /* width: 1220px; */
   display: flex;
   background: var(--Primaty-Grey-Light, #f6f5f4);
   height: 600px;
