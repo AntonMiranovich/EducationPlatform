@@ -5,7 +5,10 @@ function Header() {
   return (
     <div className={style.glob}>
       <div className={style.wrapper}>
-        <h1> <Link to={"/"}>Hschool</Link></h1>
+        <h1>
+          {" "}
+          <Link to={"/"}>Hschool</Link>
+        </h1>
         <div className={style.btns}>
           <div className={style.login}>
             <Link to={"/auth"}>Login →</Link>
