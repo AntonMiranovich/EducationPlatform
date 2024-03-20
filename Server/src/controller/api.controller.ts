@@ -19,7 +19,11 @@ route.post('/auth', async (req: Request, res: Response) => {
   try {
     const { email, pwd } = req.body;
     const data = await authUser(email, pwd);
-    res.setHeader('authorization', [createToken(data)]);
+    const token = createToken(data);
+    res.cookie('access_token', token, {
+      httpOnly: false,
+      secure: true,
+    });
     buildResponse(res, 200, data);
   } catch (error: any) {
     buildResponse(res, 404, error.message);

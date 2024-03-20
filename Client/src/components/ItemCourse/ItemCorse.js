@@ -43,14 +43,14 @@ function ItemCourse() {
       id: 6,
       course: "C++",
       description:
-        "Students will learn about variables, data types, conditionals, loops, functions, and file handling. Through hands-on exercises and projects, students will gain proficiency in writing Python code and solving real-world problems.",
+        "C++ is a versatile and powerful programming language widely used for system development, game development, and high-performance applications. It supports object-oriented programming, generics, and low-level memory manipulation.",
       img: "img1",
     },
     {
       id: 7,
       course: "C#",
       description:
-        "Students will learn about variables, data types, conditionals, loops, functions, and file handling. Through hands-on exercises and projects, students will gain proficiency in writing Python code and solving real-world problems.",
+        "C# is a robust and modern programming language designed for developing a wide range of applications, including web, desktop, and mobile applications. It offers a strong type system, garbage collection, and support for object-oriented programming, events, and LINQ.",
       img: "img3",
     },
   ];

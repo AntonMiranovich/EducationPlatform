@@ -27,6 +27,8 @@ async function createUserDB(name: string, surname: string, email: string, pwd: s
     await client.query('ROLLBACK');
     console.log(`createUserDB:${error.message}`);
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -42,6 +44,8 @@ async function updateUserDB(id: number, name: string, surname: string, email: st
     await client.query('ROLLBACK');
     console.log(`updateUserDB:${error.message}`);
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -57,6 +61,8 @@ async function deleteUserDB(id: number): Promise<iUser[]> {
     await client.query('ROLLBACK');
     console.log(`deleteDataTaskDB:${error.message}`);
     return [];
+  } finally {
+    client.release();
   }
 }
 

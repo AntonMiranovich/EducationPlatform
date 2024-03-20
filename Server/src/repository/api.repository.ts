@@ -22,6 +22,8 @@ async function registrationUserDB(name: string, surname: string, email: string, 
     console.log(`registrationUserDB: ${error.message}`);
 
     return [];
+  } finally {
+    client.release();
   }
 }
 

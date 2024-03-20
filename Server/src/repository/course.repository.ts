@@ -27,6 +27,8 @@ async function postCourseDB(course: string): Promise<iCourse[]> {
     await client.query('ROLLBACK');
     console.log(`postCourseDB:${error.message}`);
     return [];
+  } finally {
+    client.release();
   }
 }
 
