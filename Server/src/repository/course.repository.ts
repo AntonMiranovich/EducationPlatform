@@ -5,6 +5,7 @@ async function getAllCourseDB(): Promise<iCourse[]> {
   const client = await pool.connect();
   const sql = 'select * from courses';
   const data = (await client.query(sql)).rows;
+  client.release();
   return data;
 }
 
@@ -12,15 +13,16 @@ async function getCourseByIdDB(id: number): Promise<iCourse[]> {
   const client = await pool.connect();
   const sql = 'select * from courses where id=$1';
   const data = (await client.query(sql, [id])).rows;
+  client.release();
   return data;
 }
 
-async function postCourseDB(course: string): Promise<iCourse[]> {
+async function postCourseDB(course: string, description: string): Promise<iCourse[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
-    const sql = 'insert into courses (course) values ($1) returning *';
-    const data = (await client.query(sql, [course])).rows;
+    const sql = 'insert into courses (course,description) values ($1,$2) returning *';
+    const data = (await client.query(sql, [course, description])).rows;
     await client.query('COMMIT');
     return data;
   } catch (error: any) {
@@ -32,12 +34,12 @@ async function postCourseDB(course: string): Promise<iCourse[]> {
   }
 }
 
-async function updateCourseDB(id: number, course: string): Promise<iCourse[]> {
+async function updateCourseDB(id: number, course: string, description: string): Promise<iCourse[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
-    const sql = 'update courses set course=$1 where id=$2 returning*';
-    const data = (await client.query(sql, [course, id])).rows;
+    const sql = 'update courses set course=$1, description=$2 where id=$3 returning*';
+    const data = (await client.query(sql, [course, description, id])).rows;
     await client.query('COMMIT');
     return data;
   } catch (error: any) {

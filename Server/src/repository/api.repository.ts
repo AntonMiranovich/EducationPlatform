@@ -6,6 +6,7 @@ async function getUserByEmail(email: string): Promise<iUser[]> {
 
   const sql = 'select * from users where email=$1';
   const data = (await client.query(sql, [email])).rows;
+  client.release();
   return data;
 }
 

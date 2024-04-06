@@ -14,14 +14,14 @@ async function getCourseById(id: number): Promise<iCourse[]> {
   return data;
 }
 
-async function postCourse(course: string): Promise<iCourse[]> {
-  const data = await postCourseDB(course);
+async function postCourse(course: string,description:string): Promise<iCourse[]> {
+  const data = await postCourseDB(course,description);
   if (!data.length) throw new Error(ExceptionType.DB_POST_COURSES_NOT_UPDATE);
   return data;
 }
 
-async function updateCourse(id: number, course: string): Promise<iCourse[]> {
-  const data = await updateCourseDB(id, course);
+async function updateCourse(id: number, course: string,description:string): Promise<iCourse[]> {
+  const data = await updateCourseDB(id, course,description);
   if (!data.length) throw new Error(ExceptionType.DB_PUT_COURSES_NOT_UPDATE);
   return data;
 }

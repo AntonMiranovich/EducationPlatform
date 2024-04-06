@@ -26,8 +26,8 @@ route.get('/:id', isValidId, async (req: Request, res: Response): Promise<void> 
 
 route.post('/', isValidCoursesBody, async (req: Request, res: Response): Promise<void> => {
   try {
-    const { course } = req.body;
-    const data = await postCourse(course);
+    const { course,description } = req.body;
+    const data = await postCourse(course,description);
     buildResponse(res, 200, data);
   } catch (error: any) {
     buildResponse(res, 404, error.message);
@@ -37,8 +37,8 @@ route.post('/', isValidCoursesBody, async (req: Request, res: Response): Promise
 route.put('/:id', isValidId, isValidCoursesBody, async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
-    const { course } = req.body;
-    const data = await updateCourse(id, course);
+    const { course,description } = req.body;
+    const data = await updateCourse(id, course,description);
     buildResponse(res, 200, data);
   } catch (error: any) {
     buildResponse(res, 404, error.message);
